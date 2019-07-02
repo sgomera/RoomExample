@@ -1,8 +1,10 @@
 package com.example.roomexample;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,16 +16,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //per carregar el Home_Fragment programàticament:
-        //inicialització del fragment manager:
-        //fragmentManager = getSupportFragmentManager();
-        fragmentManager = getSupportFragmentManager();
-        if (findViewById(R.id.fragment_container) == null) {
-        } else {
-            if (savedInstanceState != null) {
-                return;
-            }
-            fragmentManager.beginTransaction().add(R.id.fragment_container, new HomeFragment()).commit();
-        }
+    }
+    public void onclickAddUser(View view){
+        Intent intent = new Intent(this, AddUser.class);
+        startActivity(intent);
     }
 }

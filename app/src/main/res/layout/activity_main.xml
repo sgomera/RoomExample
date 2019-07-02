@@ -6,20 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+    <Button
+        android:id="@+id/bn_add_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="onclickAddUser"
+        android:text="Add User"
+        app:layout_constraintBottom_toTopOf="@+id/bn_view_users"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bn_view_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Users"
+        app:layout_constraintBottom_toTopOf="@+id/bn_delete_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bn_add_user" />
+
+    <Button
+        android:id="@+id/bn_delete_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete User"
+        app:layout_constraintBottom_toTopOf="@+id/bn_update_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bn_view_users" />
+
+    <Button
+        android:id="@+id/bn_update_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Update User"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-<!--Comentat pq el fragment es crea i es substitueix programàticament
-        <fragment
-            android:id="@+id/fragment"
-            android:name="com.example.roomexample.HomeFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-            -->
-    </FrameLayout>
+        app:layout_constraintTop_toBottomOf="@+id/bn_delete_user" />
 </android.support.constraint.ConstraintLayout>
